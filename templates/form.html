@@ -9,43 +9,101 @@
     Resource Allocation: 1.0 <-> 10.0
     Mental Fatigue Score: 0.0 <-> 10.0 -->
 
-    <form>
-        <p>Uw geslacht:</p>
-        <select class="form-select" aria-label="Default select example">
-            <option selected value="1">Man</option>
-            <option value="2">Vrouw</option>
-        </select>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {#        <p>Uw geslacht:</p>#}
+        {#        <select class="form-select" aria-label="Default select example">#}
+        {#            <option selected value="1">Man</option>#}
+        {#            <option value="2">Vrouw</option>#}
+        {#        </select>#}
+        {##}
+        {#        <br>#}
 
-        <br>
+        <p>
+            {{ form.gender.label }}<br/>
+            {{ form.gender }}<br/>
+{#            {% for error in form.gender %}#}
+{#                <span style="color:red;">{{ error }}</span>#}
+{#            {% endfor %}#}
+        </p>
 
-        <p>Het bedrijfstype waar uw werkzaam bent:</p>
-        <select class="form-select" aria-label="Default select example">
-            <option selected value="1">Productie</option>
-            <option value="2">Service</option>
-        </select>
+        {##}
+        {#        <p>Het bedrijfstype waar uw werkzaam bent:</p>#}
+        {#        <select class="form-select" aria-label="Default select example">#}
+        {#            <option selected value="1">Productie</option>#}
+        {#            <option value="2">Service</option>#}
+        {#        </select>#}
+        {##}
+        {#        <br>#}
 
-        <br>
+        <p>
+            {{ form.bedrijfstype.label }}<br/>
+            {{ form.bedrijfstype }}<br/>
+{#            {% for error in form.bedrijfstype %}#}
+{#                <span style="color:red;">{{ error }}</span>#}
+{#            {% endfor %}#}
+        </p>
 
-        <p>Heeft uw de mogelijkheid om thuis te werken?:</p>
-        <select class="form-select" aria-label="Default select example">
-            <option selected value="1">Ja</option>
-            <option value="2">Nee</option>
-        </select>
+        {##}
+        {#        <p>Heeft uw de mogelijkheid om thuis te werken?:</p>#}
+        {#        <select class="form-select" aria-label="Default select example">#}
+        {#            <option selected value="1">Ja</option>#}
+        {#            <option value="2">Nee</option>#}
+        {#        </select>#}
+        {##}
+        {#        <br>#}
 
-        <br>
+        <p>
+            {{ form.thuiswerken.label }}<br/>
+            {{ form.thuiswerken }}<br/>
+{#            {% for error in form.thuiswerken %}#}
+{#                <span style="color:red;">{{ error }}</span>#}
+{#            {% endfor %}#}
+        </p>
 
-        <p>Hoe belangrijk is uw werk?: (Op een schaal van 0 tot en met 5)</p>
-        <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange3">
+        {##}
+        {#        <p>Hoe belangrijk is uw werk?: (Op een schaal van 0 tot en met 5)</p>#}
+        {#        <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange3">#}
+        {##}
+        {#        <br>#}
 
-        <br>
+        <p>
+            {{ form.hbw.label }}<br/>
+            {{ form.hbw }}<br/>
+{#            {% for error in form.hbw %}#}
+{#                <span style="color:red;">{{ error }}</span>#}
+{#            {% endfor %}#}
+        </p>
 
-        <p>Uw gemiddelde werkuren per dag</p>
-        <input type="range" class="form-range" min="0" max="10" step="0.5" id="customRange4">
+        {##}
+        {#        <p>Uw gemiddelde werkuren per dag</p>#}
+        {#        <input type="range" class="form-range" min="0" max="10" step="0.5" id="customRange4">#}
+        {##}
+        {#        <br>#}
 
-        <br>
+        <p>
+            {{ form.wu.label }}<br/>
+            {{ form.wu }}<br/>
+{#            {% for error in form.wu %}#}
+{#                <span style="color:red;">{{ error }}</span>#}
+{#            {% endfor %}#}
+        </p>
 
-        <p>Op Welke niveau voelt uw mentale moeheid?: (Op een schaal van 0 tot en met 10)</p>
-        <input type="range" class="form-range" min="0" max="10" step="0.5" id="customRange4">
+        {##}
+        {#        <p>Op Welke niveau voelt uw mentale moeheid?: (Op een schaal van 0 tot en met 10)</p>#}
+        {#        <input type="range" class="form-range" min="0" max="10" step="0.5" id="customRange4">#}
+
+        <p>
+            {{ form.mo.label }}<br/>
+            {{ form.mo }}<br/>
+{#            {% for error in form.mo %}#}
+            {#                <span style="color:red;">{{ error }}</span>#}
+            {#            {% endfor %}#}
+        </p>
+
+        <p>
+            <input type="submit" value="bevestigen">
+        </p>
 
     </form>
 
