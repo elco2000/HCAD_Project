@@ -1,54 +1,76 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Het advies {% endblock %}</h1>
-    <p>Ons advies is dat u een <span style="color:black;font-weight:bold">{{ message }}</span> kans heeft op een
-        burn-out. ({{ rate }})
-    </p>
-    <i>* Ons advies is gebaseerd op een informatiebron die bestaat uit 22000 werknemers die dezelfde vragen als u hebben
-        beantwoord. Voor ieder persoon kan zijn of haar limiet of grenzen ergens anders liggen. Luister daarom vooral
-        als eerst naar u eigen lichaam.</i><br><br><br>
+    <br>
+    <section id="services" class="services section-bg">
+        <div class="container">
+
+            <div class="section-titleTwo" data-aos="fade-up">
+                <h1>{% block title %} Het advies {% endblock %}</h1>
+                <br>
+                <p>Ons advies is dat u een <span style="color:black;font-weight:bold">{{ message }}</span> kans heeft op
+                    een
+                    burn-out. ({{ rate }})
+                </p>
+                <i class="desc-text">* Ons advies is gebaseerd op een informatiebron die bestaat uit 22000 werknemers die dezelfde vragen
+                    als u hebben
+                    beantwoord. Voor ieder persoon kan zijn of haar limiet of grenzen ergens anders liggen. Luister
+                    daarom vooral
+                    als eerst naar u eigen lichaam.</i><br><br><br>
 
 
-    {% if rate < 0.6 %}
-        <p>Uit ons advies is gekomen dat u niet een grote kans heeft op een burn-out binnen uw huidige werkomgeving.</p>
-        <br/>
+                {% if rate < 0.6 %}
+                    <p>Uit ons advies is gekomen dat u niet een grote kans heeft op een burn-out binnen uw huidige
+                        werkomgeving.</p>
+                    <br/>
 
-        <p>Ook hebben we paar tips voor uw om een burn-out te voorkomen:</p>
-        <ul>
-            <li>Geef toe dat u een probleem heeft, probeer hier duidelijk mee te communiceren met de omgeving om u heen.
-                Niet iedereen is gelijk en heeft zijn eigen grenzen.
-            </li>
-            <li>Praat met andere mensen erover, dit kan ervoor zorgen dat de omgeving uw situatie kan begrijpen en
-                eventueel gezamenlijk naar een oplossing gezocht kan worden.
-            </li>
-            <li>Als u dit moeilijk vindt, kunt u altijd nog een cursus of therapie volgen die u kan helpen om er mee te
-                leren omgaan.
-            </li>
-            <li>Luister vooral ook naar u eigen lichaam.</li>
-            <li>Zorg voor een gezond ritme.</li>
-            <li>Accepteer dat zaken in het leven soms niet lopen zoals je zou willen.</li>
-        </ul>
-    {% endif %}
+                    <p>Ook hebben we paar tips voor uw om een burn-out te voorkomen:</p>
+                    <ul>
+                        <li>Geef toe dat u een probleem heeft, probeer hier duidelijk mee te communiceren met de
+                            omgeving om u heen.
+                            Niet iedereen is gelijk en heeft zijn eigen grenzen.
+                        </li>
+                        <li>Praat met andere mensen erover, dit kan ervoor zorgen dat de omgeving uw situatie kan
+                            begrijpen en
+                            eventueel gezamenlijk naar een oplossing gezocht kan worden.
+                        </li>
+                        <li>Als u dit moeilijk vindt, kunt u altijd nog een cursus of therapie volgen die u kan helpen
+                            om er mee te
+                            leren omgaan.
+                        </li>
+                        <li>Luister vooral ook naar u eigen lichaam.</li>
+                        <li>Zorg voor een gezond ritme.</li>
+                        <li>Accepteer dat zaken in het leven soms niet lopen zoals je zou willen.</li>
+                    </ul>
+                {% endif %}
 
-    {% if rate >= 0.6 %}
-        <p>Uit ons advies is gekomen dat u een hoge kans heeft op het krijgen van een burn-out. Het is belangrijk om
-            grenzen te stellen waardoor u niet te veel van zichzelf gaat vragen. Probeer ook signalen van stress te
-            herkennen om er op tijd bij te zijn.</p> <br/>
-        <p>Ook hebben we paar tips voor uw om een burn-out te voorkomen:</p>
-        <ul>
-            <li>Geef toe dat u een probleem heeft, probeer hier duidelijk mee te communiceren met de omgeving om u heen.
-                Niet iedereen is gelijk en heeft zijn eigen grenzen.
-            </li>
-            <li>Praat met andere mensen erover, dit kan ervoor zorgen dat de omgeving uw situatie kan begrijpen en
-                eventueel gezamenlijk naar een oplossing gezocht kan worden.
-            </li>
-            <li>Als u dit moeilijk vindt, kunt u altijd nog een cursus of therapie volgen die u kan helpen om er mee te
-                leren omgaan.
-            </li>
-            <li>Luister vooral ook naar u eigen lichaam.</li>
-            <li>Zorg voor een gezond ritme.</li>
-            <li>Accepteer dat zaken in het leven soms niet lopen zoals je zou willen.</li>
-        </ul>
-    {% endif %}
+                {% if rate >= 0.6 %}
+                    <p>Uit ons advies is gekomen dat u een hoge kans heeft op het krijgen van een burn-out. Het is
+                        belangrijk om
+                        grenzen te stellen waardoor u niet te veel van zichzelf gaat vragen. Probeer ook signalen van
+                        stress te
+                        herkennen om er op tijd bij te zijn.</p> <br/>
+                    <p>Ook hebben we paar tips voor uw om een burn-out te voorkomen:</p>
+                    <ul>
+                        <li>Geef toe dat u een probleem heeft, probeer hier duidelijk mee te communiceren met de
+                            omgeving om u heen.
+                            Niet iedereen is gelijk en heeft zijn eigen grenzen.
+                        </li>
+                        <li>Praat met andere mensen erover, dit kan ervoor zorgen dat de omgeving uw situatie kan
+                            begrijpen en
+                            eventueel gezamenlijk naar een oplossing gezocht kan worden.
+                        </li>
+                        <li>Als u dit moeilijk vindt, kunt u altijd nog een cursus of therapie volgen die u kan helpen
+                            om er mee te
+                            leren omgaan.
+                        </li>
+                        <li>Luister vooral ook naar u eigen lichaam.</li>
+                        <li>Zorg voor een gezond ritme.</li>
+                        <li>Accepteer dat zaken in het leven soms niet lopen zoals je zou willen.</li>
+                    </ul>
+                {% endif %}
+            </div>
+
+        </div>
+    </section>
 {% endblock %}
