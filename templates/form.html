@@ -22,9 +22,9 @@
         <p>
             {{ form.gender.label }}<br/>
             {{ form.gender }}<br/>
-{#            {% for error in form.gender %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
+            {#            {% for error in form.gender %}#}
+            {#                <span style="color:red;">{{ error }}</span>#}
+            {#            {% endfor %}#}
         </p>
 
         {##}
@@ -38,10 +38,13 @@
 
         <p>
             {{ form.bedrijfstype.label }}<br/>
+            <i>Productie is een bedrijfstype waarbij het bedrijf een product of producten aanbiedt. Service is een
+                bedrijfstype
+                waarbij een service wordt aangeboden.</i> <br/>
             {{ form.bedrijfstype }}<br/>
-{#            {% for error in form.bedrijfstype %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
+            {#            {% for error in form.bedrijfstype %}#}
+            {#                <span style="color:red;">{{ error }}</span>#}
+            {#            {% endfor %}#}
         </p>
 
         {##}
@@ -56,9 +59,9 @@
         <p>
             {{ form.thuiswerken.label }}<br/>
             {{ form.thuiswerken }}<br/>
-{#            {% for error in form.thuiswerken %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
+            {#            {% for error in form.thuiswerken %}#}
+            {#                <span style="color:red;">{{ error }}</span>#}
+            {#            {% endfor %}#}
         </p>
 
         {##}
@@ -69,10 +72,11 @@
 
         <p>
             {{ form.hbw.label }}<br/>
-            {{ form.hbw }}<br/>
-{#            {% for error in form.hbw %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
+            <i>Hoe belangerijk is het werk dat u doet op een schaal van 0 tot en met 5.</i><br/>
+            {{ form.hbw }} <br/>
+            {#            {% for error in form.hbw %}#}
+            {#                <span style="color:red;">{{ error }}</span>#}
+            {#            {% endfor %}#}
         </p>
 
         {##}
@@ -84,9 +88,9 @@
         <p>
             {{ form.wu.label }}<br/>
             {{ form.wu }}<br/>
-{#            {% for error in form.wu %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
+            {#            {% for error in form.wu %}#}
+            {#                <span style="color:red;">{{ error }}</span>#}
+            {#            {% endfor %}#}
         </p>
 
         {##}
@@ -95,14 +99,15 @@
 
         <p>
             {{ form.mo.label }}<br/>
+            <i>Een schatting van uw mentale moeheid op dit moment op een schaal van 0 tot en met 10.</i>
             {{ form.mo }}<br/>
-{#            {% for error in form.mo %}#}
+            {#            {% for error in form.mo %}#}
             {#                <span style="color:red;">{{ error }}</span>#}
             {#            {% endfor %}#}
         </p>
 
         <p>
-            <input type="submit" value="bevestigen">
+            <input type="submit" value="Bevestigen">
         </p>
 
     </form>

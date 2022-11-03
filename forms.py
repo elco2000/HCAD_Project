@@ -5,18 +5,18 @@ from wtforms.validators import InputRequired, Length
 
 
 class BurnoutForm(FlaskForm):
-    gender = RadioField('Gender', choices=['Male', 'Female'],
+    gender = RadioField('Uw geslacht:', choices=['Male', 'Female'],
                         validators=[InputRequired()])
-    bedrijfstype = RadioField('Bedrijfstype', choices=['Productie', 'Service'],
+    bedrijfstype = RadioField('Het bedrijfstype waar uw werkzaam bent:', choices=['Productie', 'Service'],
                               validators=[InputRequired()])
-    thuiswerken = RadioField('Thuis werken?', choices=['Ja', 'Nee'],
+    thuiswerken = RadioField('Heeft uw de mogelijkheid om thuis te werken:', choices=['Ja', 'Nee'],
                              validators=[InputRequired()])
-    hbw = IntegerRangeField('Hoe belangrijk is uw werk?',
+    hbw = IntegerRangeField('Hoe belangrijk is uw werk:',
                             [validators.NumberRange(min=0, max=5)],
                             )
-    wu = IntegerRangeField('Uw gemiddelde werkuren per dag',
+    wu = IntegerRangeField('Uw gemiddelde werkuren per dag:',
                            [validators.NumberRange(min=0, max=10)],
                            )
-    mo = IntegerRangeField('Op Welke niveau voelt uw mentale moeheid?',
+    mo = IntegerRangeField('Op Welke niveau voelt uw mentale moeheid:',
                            [validators.NumberRange(min=0, max=10)],
                            )

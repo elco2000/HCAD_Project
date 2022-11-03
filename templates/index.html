@@ -1,5 +1,35 @@
-{%  extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-    <h1>{%  block title %} Welcome to the Burn Out Meter {%  endblock %}</h1>
+    <h1>{% block title %} Burn-out Advies {% endblock %}</h1>
+
+    <p>Tegenwoordig zijn de eisen en verwachtingen in werkomgevingen uiterst hoog. Veel mensen gaan hier goed mee om,
+        bovendien zijn er mensen die hier niet zo goed mee kunnen omgaan en komen zichzelf tegen. Dit wordt ook wel in
+        de
+        praktijk genoemd een burn-out.
+    </p> <br>
+    <p>
+        Maar wat is eigenlijk een burn-out? Een burn-out is een gevolg van een langdurige periode van stress en
+        spanning. Mensen kunnen hierdoor verschillende klachten ervaren dat op een gegeven moment zelfs kan leiden
+        tot langdurig niet kunnen werken.
+    </p> <br>
+    <p>
+        De stress en spanningen kunnen van verschillende aspecten komen maar ook van de werkvloer. Daarom is deze
+        website in het leven geroepen om u een advies mee te kunnen geven gebaseerd op uw antwoorden, vanuit data van
+        andere werknemers, zodat u eventueel een burn-out kan voorkomen of aan ziet komen.
+    </p> <br>
+
+    <p>
+
+    </p>
+    <form action="/form" method="get">
+        <button type="submit">Vul nu de vragenlijst in!</button>
+    </form>
+    <br>
+
+    <p><i>* Al de data die u invult en het advies dat u terug krijgt, zal niet worden opgeslagen en wordt altijd
+        gezien worden als persoonlijke informatie.</i>
+    </p>
+
+
 {% endblock %}
