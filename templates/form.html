@@ -1,5 +1,70 @@
-{%  extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-    <h1>{%  block title %} Burn out meter {%  endblock %}</h1>
+    <br>
+    <section id="services" class="services section-bg">
+        <div class="container">
+
+            <div class="section-titleTwo" data-aos="fade-up">
+                <h1>{% block title %} Vragenlijst {% endblock %}</h1>
+                <br>
+                <!-- Gender: Male / Female
+                Company type: Service / Product
+                WFH setup available: Yes / No
+                Designation: 0.0 <-> 5.0
+                Resource Allocation: 1.0 <-> 10.0
+                Mental Fatigue Score: 0.0 <-> 10.0 -->
+
+                <form action="" method="post">
+                    {{ form.hidden_tag() }}
+
+                    <p class="input-form-box">
+                        {{ form.gender.label }}<br/>
+                        {{ form.gender }}<br/>
+                    </p>
+
+                    <p class="input-form-box">
+                        {{ form.bedrijfstype.label }}<br/>
+                        <i class="desc-text">Productie is een bedrijfstype waarbij het bedrijf een product of producten
+                            aanbiedt. Service
+                            is een
+                            bedrijfstype
+                            waarbij een service wordt aangeboden.</i> <br/>
+                        {{ form.bedrijfstype }}<br/>
+                    </p>
+
+                    <p class="input-form-box">
+                        {{ form.thuiswerken.label }}<br/>
+                        {{ form.thuiswerken }}<br/>
+                    </p>
+
+                    <p>
+                        {{ form.hbw.label }}<br/>
+                        <i class="desc-text">Hoe belangerijk is het werk dat u doet op een schaal van 0 tot en met
+                            5.</i><br/>
+                        {{ form.hbw }} <br/>
+                    </p>
+
+                    <p>
+                        {{ form.wu.label }}<br/>
+                        {{ form.wu}}<br/>
+                    </p>
+
+                    <p>
+                        {{ form.mo.label }}<br/>
+                        <i class="desc-text">Een schatting van uw mentale moeheid op dit moment op een schaal van 0 tot
+                            en met 10.</i><br>
+                        {{ form.mo }}<br/>
+                    </p>
+
+                    <p>
+                        <input type="submit" class="button-about" value="Bevestigen">
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
 {% endblock %}
