@@ -1,5 +1,99 @@
-{%  extends 'base.html' %}
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block content %}#}
+{#    <h1>{% block title %} Burn-out Advies {% endblock %}</h1>#}
+{##}
+{#    <p>Tegenwoordig zijn de eisen en verwachtingen in werkomgevingen uiterst hoog. Veel mensen gaan hier goed mee om,#}
+{#        bovendien zijn er mensen die hier niet zo goed mee kunnen omgaan en komen zichzelf tegen. Dit wordt ook wel in#}
+{#        de#}
+{#        praktijk genoemd een burn-out.#}
+{#    </p> <br>#}
+{#    <p>#}
+{#        Maar wat is eigenlijk een burn-out? Een burn-out is een gevolg van een langdurige periode van stress en#}
+{#        spanning. Mensen kunnen hierdoor verschillende klachten ervaren dat op een gegeven moment zelfs kan leiden#}
+{#        tot langdurig niet kunnen werken.#}
+{#    </p> <br>#}
+{#    <p>#}
+{#        De stress en spanningen kunnen van verschillende aspecten komen maar ook van de werkvloer. Daarom is deze#}
+{#        website in het leven geroepen om u een advies mee te kunnen geven gebaseerd op uw antwoorden, vanuit data van#}
+{#        andere werknemers, zodat u eventueel een burn-out kan voorkomen of aan ziet komen.#}
+{#    </p> <br>#}
+{##}
+{#    <p>#}
+{##}
+{#    </p>#}
+{#    <form action="/form" method="get">#}
+{#        <button type="submit">Vul nu de vragenlijst in!</button>#}
+{#    </form>#}
+{#    <br>#}
+{##}
+{#    <p><i>* Al de data die u invult en het advies dat u terug krijgt, zal niet worden opgeslagen en wordt altijd#}
+{#        gezien worden als persoonlijke informatie.</i>#}
+{#    </p>#}
+{##}
+{##}
+{#{% endblock %}#}
+
+{% extends 'base.html' %}
 
 {% block content %}
-    <h1>{%  block title %} Welcome to the Burn Out Meter {%  endblock %}</h1>
+
+    <section id="hero">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
+                     data-aos="fade-up">
+                    <div>
+                        <h1>Uw persoonlijke Burn-out Advies</h1>
+                        <h2>Tegenwoordig zijn de eisen en verwachtingen in werkomgevingen uiterst hoog. Veel mensen gaan
+                            hier goed mee om,
+                            bovendien zijn er mensen die hier niet zo goed mee kunnen omgaan en komen zichzelf tegen.
+                            Dit wordt ook wel in
+                            de
+                            praktijk genoemd een burn-out.</h2><br>
+                        <h2>De stress en spanningen kunnen van verschillende aspecten komen maar ook van de werkvloer.
+                            Daarom is deze
+                            website in het leven geroepen om u een advies mee te kunnen geven gebaseerd op uw
+                            antwoorden, vanuit data van
+                            andere werknemers, zodat u eventueel een burn-out kan voorkomen of aan ziet komen.</h2>
+                        <a href="{{ url_for('form') }}" class="btn-get-started scrollto">Vul nu de vragenlijst in!</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+                    <img src="../static/images/work.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6" data-aos="zoom-in">
+                        <img src="../static/images/about.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+                        <div class="content pt-4 pt-lg-0">
+                            <h3>Leer meer over burn-outs</h3>
+                            <p class="fst-italic">
+                                Een burn-out is een stadium die je bereikt na langdurig in contact te zijn geweest met
+                                stress en spanning.
+                                Klachten kunnen mensen lichamelijk en geestelijk ervaren en daardoor niet alleen een
+                                psychisch probleem....
+                            </p>
+                            <a href="{{ url_for('about') }}" class="btn-get-started scrollto button-about">Lees meer</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+    </main><!-- End #main -->
 {% endblock %}

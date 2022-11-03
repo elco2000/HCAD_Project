@@ -1,47 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Burn-out Advies</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
+    <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <title>{% block title %} {% endblock %}</title>
+    <link href="../static/css/style.css" rel="stylesheet">
+
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-    <a class="navbar-brand" href="{{ url_for('index') }}">Burn out meter</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('form') }}">Meter</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('about') }}">About</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
-    {% block content %} {% endblock %}
-</div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+        <div class="logo me-auto">
+            <h1><a href="{{ url_for('index') }}">Burn-out Advice</a></h1>
+        </div>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link scrollto" href="{{ url_for('index') }}">Homepage</a></li>
+                <li><a class="nav-link scrollto" href="{{ url_for('form') }}">Vragenlijst</a></li>
+                <li><a class="nav-link scrollto" href="{{ url_for('about') }}">Over Burn-outs</a></li>
+            </ul>
+        </nav><!-- .navbar -->
+    </div>
+</header><!-- End Header -->
+
+{% block content %} {% endblock %}
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            <strong><span>Burn-out Advies</span></strong>.
+        </div>
+        <div class="credits">
+            <a>Gemaakt door Elco Mussert</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../static/vendor/aos/aos.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../static/js/main.js"></script>
+
 </body>
+
 </html>

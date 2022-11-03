@@ -1,110 +1,70 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Burn out meter: {{ rate }} {% endblock %}</h1>
-    <!-- Gender: Male / Female
-    Company type: Service / Product
-    WFH setup available: Yes / No
-    Designation: 0.0 <-> 5.0
-    Resource Allocation: 1.0 <-> 10.0
-    Mental Fatigue Score: 0.0 <-> 10.0 -->
+    <br>
+    <section id="services" class="services section-bg">
+        <div class="container">
 
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        {#        <p>Uw geslacht:</p>#}
-        {#        <select class="form-select" aria-label="Default select example">#}
-        {#            <option selected value="1">Man</option>#}
-        {#            <option value="2">Vrouw</option>#}
-        {#        </select>#}
-        {##}
-        {#        <br>#}
+            <div class="section-titleTwo" data-aos="fade-up">
+                <h1>{% block title %} Vragenlijst {% endblock %}</h1>
+                <br>
+                <!-- Gender: Male / Female
+                Company type: Service / Product
+                WFH setup available: Yes / No
+                Designation: 0.0 <-> 5.0
+                Resource Allocation: 1.0 <-> 10.0
+                Mental Fatigue Score: 0.0 <-> 10.0 -->
 
-        <p>
-            {{ form.gender.label }}<br/>
-            {{ form.gender }}<br/>
-{#            {% for error in form.gender %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
-        </p>
+                <form action="" method="post">
+                    {{ form.hidden_tag() }}
 
-        {##}
-        {#        <p>Het bedrijfstype waar uw werkzaam bent:</p>#}
-        {#        <select class="form-select" aria-label="Default select example">#}
-        {#            <option selected value="1">Productie</option>#}
-        {#            <option value="2">Service</option>#}
-        {#        </select>#}
-        {##}
-        {#        <br>#}
+                    <p class="input-form-box">
+                        {{ form.gender.label }}<br/>
+                        {{ form.gender }}<br/>
+                    </p>
 
-        <p>
-            {{ form.bedrijfstype.label }}<br/>
-            {{ form.bedrijfstype }}<br/>
-{#            {% for error in form.bedrijfstype %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
-        </p>
+                    <p class="input-form-box">
+                        {{ form.bedrijfstype.label }}<br/>
+                        <i class="desc-text">Productie is een bedrijfstype waarbij het bedrijf een product of producten
+                            aanbiedt. Service
+                            is een
+                            bedrijfstype
+                            waarbij een service wordt aangeboden.</i> <br/>
+                        {{ form.bedrijfstype }}<br/>
+                    </p>
 
-        {##}
-        {#        <p>Heeft uw de mogelijkheid om thuis te werken?:</p>#}
-        {#        <select class="form-select" aria-label="Default select example">#}
-        {#            <option selected value="1">Ja</option>#}
-        {#            <option value="2">Nee</option>#}
-        {#        </select>#}
-        {##}
-        {#        <br>#}
+                    <p class="input-form-box">
+                        {{ form.thuiswerken.label }}<br/>
+                        {{ form.thuiswerken }}<br/>
+                    </p>
 
-        <p>
-            {{ form.thuiswerken.label }}<br/>
-            {{ form.thuiswerken }}<br/>
-{#            {% for error in form.thuiswerken %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
-        </p>
+                    <p>
+                        {{ form.hbw.label }}<br/>
+                        <i class="desc-text">Hoe belangerijk is het werk dat u doet op een schaal van 0 tot en met
+                            5.</i><br/>
+                        {{ form.hbw }} <br/>
+                    </p>
 
-        {##}
-        {#        <p>Hoe belangrijk is uw werk?: (Op een schaal van 0 tot en met 5)</p>#}
-        {#        <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange3">#}
-        {##}
-        {#        <br>#}
+                    <p>
+                        {{ form.wu.label }}<br/>
+                        {{ form.wu}}<br/>
+                    </p>
 
-        <p>
-            {{ form.hbw.label }}<br/>
-            {{ form.hbw }}<br/>
-{#            {% for error in form.hbw %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
-        </p>
+                    <p>
+                        {{ form.mo.label }}<br/>
+                        <i class="desc-text">Een schatting van uw mentale moeheid op dit moment op een schaal van 0 tot
+                            en met 10.</i><br>
+                        {{ form.mo }}<br/>
+                    </p>
 
-        {##}
-        {#        <p>Uw gemiddelde werkuren per dag</p>#}
-        {#        <input type="range" class="form-range" min="0" max="10" step="0.5" id="customRange4">#}
-        {##}
-        {#        <br>#}
+                    <p>
+                        <input type="submit" class="button-about" value="Bevestigen">
+                    </p>
 
-        <p>
-            {{ form.wu.label }}<br/>
-            {{ form.wu }}<br/>
-{#            {% for error in form.wu %}#}
-{#                <span style="color:red;">{{ error }}</span>#}
-{#            {% endfor %}#}
-        </p>
+                </form>
+            </div>
 
-        {##}
-        {#        <p>Op Welke niveau voelt uw mentale moeheid?: (Op een schaal van 0 tot en met 10)</p>#}
-        {#        <input type="range" class="form-range" min="0" max="10" step="0.5" id="customRange4">#}
-
-        <p>
-            {{ form.mo.label }}<br/>
-            {{ form.mo }}<br/>
-{#            {% for error in form.mo %}#}
-            {#                <span style="color:red;">{{ error }}</span>#}
-            {#            {% endfor %}#}
-        </p>
-
-        <p>
-            <input type="submit" value="bevestigen">
-        </p>
-
-    </form>
+        </div>
+    </section>
 
 {% endblock %}

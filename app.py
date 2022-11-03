@@ -19,11 +19,7 @@ def index():  # put application's code here
 def form():
     burnout_form = BurnoutForm()
     try:
-        model = joblib.load("Notebooks/Completed_model.pkl")
-        test_pred = np.array([2, 5, 6, 0, 1, 0, 1, 0, 1]).reshape(1, -1)
-        predicted_burnoutrate = model.predict(test_pred)
-        print(predicted_burnoutrate)
-        return render_template('form.html', rate=float(predicted_burnoutrate), form=burnout_form)
+        return render_template('form.html', form=burnout_form)
     except ValueError:
         return render_template('index.html')
 
@@ -59,16 +55,16 @@ def result():
         print(float(form['wu']))
         print(float(form['mo']))
         if predicted < 0.2:
-            message_conclusion = "Zeer laag"
+            message_conclusion = "zeer lage"
         elif predicted < 0.4:
-            message_conclusion = "Laag"
+            message_conclusion = "lage"
         elif predicted < 0.6:
-            message_conclusion = "Gemiddeld"
+            message_conclusion = "gemiddelde"
         elif predicted < 0.8:
-            message_conclusion = "Hoog"
+            message_conclusion = "hoge"
         else:
-            message_conclusion = "Zeer hoog"
-        return render_template("result.html", rate=float(predicted), message=message_conclusion)
+            message_conclusion = "zeer hoge"
+        return render_template("result.html", rate=round(float(predicted), 2), message=message_conclusion)
     except ValueError:
         return render_template("form.html")
 
@@ -76,7 +72,6 @@ def result():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
 
 if __name__ == '__main__':
     app.run()
