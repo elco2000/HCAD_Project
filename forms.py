@@ -3,6 +3,7 @@ from wtforms import (SelectField,
                      RadioField, IntegerRangeField, validators)
 from wtforms.validators import InputRequired, Length
 
+#
 
 class BurnoutForm(FlaskForm):
     gender = RadioField('Uw geslacht:', choices=['Male', 'Female'],
